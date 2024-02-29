@@ -1,0 +1,197 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  font-family: Kumbh Sans;
+  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  min-height: 100vh;
+  transition: 0.2s;
+
+}
+
+main {
+  display: block;
+
+  .faq_card_container {
+    height: 509px;
+    margin-left: 42px;
+    margin-top: 48px;
+    transition: 0.2s;
+
+    position: relative;
+
+    transition: 0.2s;
+    background-color: white;
+    border-radius: 22px;
+    display: flex;
+    padding: 0 104px 0 476px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 60px -1px, rgba(0, 0, 0, 0.3) 0px 50px 60px -12px;
+    .faq_image_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: url("./images/illustration-woman-online-desktop.svg") bottom 5rem left -5.24rem no-repeat,
+        url("./images/bg-pattern-desktop.svg") bottom -8.8rem left -36rem no-repeat;
+      background-repeat: no-repeat;
+  
+      .box_image {
+        position: absolute;
+        left: -120px;
+        bottom: 120px;
+        animation: wave 2s infinite;
+        animation-delay: 0;
+        user-select: none;
+      }
+      .box_image_women {
+        display: none;
+      }
+    
+    }
+      
+    .accordion__wrapper {
+      width: 342px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+      padding: 44px 0;
+      h3 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+    
+      .questions_accordions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .question_answer_accordion { 
+          padding-block-end: 15px;
+          border-bottom: 1px solid hsl(240, 5%, 91%);
+          display: block;
+          .question {
+            display: grid;
+            grid-template-columns: 270px auto;
+            align-items: center;
+            gap: 10px;
+            .question_selected {
+              font-weight: 600;
+            }
+            h4 {
+              color: hsl(237, 12%, 33%);
+              font-weight: 400;
+              margin: 0.25rem;
+              font-size: 14px;
+
+              cursor: pointer;
+              &:hover {
+                color: hsl(14, 88%, 65%);
+              }
+    
+            } 
+            .up_arrow {
+              transform: rotateX(180deg);
+              transition: all ease-in-out 300ms;
+            }        
+            .up_down {
+              transition: all ease-in-out 300ms;
+            }        
+          }
+    
+          .answer {
+            padding-inline-start: 0.5rem;
+            margin: 0.25rem 0;
+            font-size: 12px;
+            transition: all ease-in-out 20ms;
+
+    
+          }
+        }
+      }
+    }
+  
+    @media screen and (max-width: 750px) { 
+
+      flex-direction: column;
+        padding: 80px 30px 30px;
+        margin: 0;
+        height: fit-content;
+        overflow: visible;
+        margin-top: 150px;
+        .faq_image_container {
+          position: absolute;
+          top: -29%;
+          width: 100%;
+          height: 53%;
+          background: url("./images/illustration-woman-online-mobile.svg") center center no-repeat,
+            url("./images/bg-pattern-mobile.svg") top 11rem center;
+          background-repeat: no-repeat;
+          background-size: 250px;
+          animation: wave 2s infinite;
+
+        }
+        .box_image {
+          display: none;
+          animation: wave 2s infinite;
+          animation-delay: 0;
+          user-select: none;
+        }
+  
+      .accordion__wrapper {
+        justify-content: center;
+        align-items: center;
+        margin-block-start: 3rem;
+        margin-block-end: 3rem;
+        padding: 1rem;
+      }
+  
+    }
+  }
+}
+
+
+
+
+
+
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0%);
+    
+  }
+  50% {
+    transform: translateY(2%);
+    
+  }
+
+  100% {
+    transform: translateY(0%);
+
+  }
+
+}

@@ -47,8 +47,8 @@ main {
       left: 0;
       width: 50%;
       height: 100%;
-      background: url("./images/illustration-woman-online-desktop.svg") bottom 5rem left -5.24rem no-repeat,
-        url("./images/bg-pattern-desktop.svg") bottom -8.8rem left -36rem no-repeat;
+      background: url("../images/illustration-woman-online-desktop.svg") bottom 5rem left -5.24rem no-repeat,
+        url("../images/bg-pattern-desktop.svg") bottom -8.8rem left -36rem no-repeat;
       background-repeat: no-repeat;
   
       .box_image {
@@ -139,8 +139,8 @@ main {
           top: -29%;
           width: 100%;
           height: 53%;
-          background: url("./images/illustration-woman-online-mobile.svg") center center no-repeat,
-            url("./images/bg-pattern-mobile.svg") top 11rem center;
+          background: url("../images/illustration-woman-online-mobile.svg") center center no-repeat,
+            url("../images/bg-pattern-mobile.svg") top 11rem center;
           background-repeat: no-repeat;
           background-size: 250px;
           animation: wave 2s infinite;
